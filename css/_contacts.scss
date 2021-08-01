@@ -1,0 +1,47 @@
+.contacts {
+  position: relative;
+  background: #252934;
+  padding-top: 175px;
+  svg {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  .title {
+    @extend %title;
+    color: $white-color;
+  }
+  .line {
+    background: $white-color;
+  }
+  .text-muted {
+    @extend p;
+    color: $second-color !important;
+  }
+  form {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    .form-group {
+      margin-bottom: 5px;
+      input,textarea {
+        background: #1E242C;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+      }
+    }
+    button {
+      background: transparent;
+      color: #fff;
+      float: right;
+      font-size: 18px;
+      margin: 5px 0 10px 0;
+      outline: 0;
+      padding: 10px 30px;
+      border: 1px solid $white-color;
+      border-radius: 0;
+    }
+    @extend %btn;
+  }
+}

@@ -1,0 +1,29 @@
+nav {
+    background: $bg-nav;
+    border-bottom: 3px solid $primary-color;
+    .navbar-brand {
+      color: $white-color !important;
+      span:last-child {
+        color: $second-color;
+      }
+    }
+    li.nav-item {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    a.nav-link {
+      padding: 0;
+      color: $white-color !important;
+      text-transform: uppercase;
+      transition: all 0.4s linear;
+      &:hover {
+        color: $second-color !important;
+      }
+    }
+    .active {
+      a {
+        color: $second-color !important;
+      }
+    }
+  }

@@ -1,0 +1,48 @@
+footer {
+  text-align: center;
+  background: #1b242f;
+  position: relative;
+  margin: 0;
+  .icon-wrap {
+  @extend %fx;
+    padding-top: 50px;
+
+    .icon {
+      @extend %fx;
+      color: #fff;
+      background: #262f38;
+      cursor: pointer;
+      font-size: 18pt;
+      height: 55px;
+      margin: 0 15px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+      width: 55px;
+      &:hover .fab {
+        -webkit-animation: toBottomFromTop 0.3s forwards;
+        -moz-animation: toBottomFromTop 0.3s forwards;
+        animation: toBottomFromTop 0.3s forwards;
+      }
+      &:hover {
+        background: #04c2c9;
+        box-shadow: 0 0 0 3px rgba(4, 94, 201, 0.1);
+        transform: scale(0.9);
+      }
+    }
+    .fas.fa-codepen {
+      font-size: 20pt;
+    }
+  }
+  .footnote {
+    font-size: 18px;
+    color: #8f9aa7;
+    margin-top: 35px;
+    opacity: 0.6;
+    .highlight {
+      color: $second-color;
+      font-family: "Open Sans";
+    }
+  }
+}

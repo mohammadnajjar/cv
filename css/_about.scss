@@ -1,0 +1,116 @@
+.about {
+  padding-top: 50px;
+  .title {
+    @extend %title;
+  }
+  .text-muted {
+    @extend %text-muted;
+  }
+  h3 {
+    @extend %card-title;
+  }
+  p {
+    @extend %card-para;
+  }
+  .hex-wrap {
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    width: 80px;
+    .hexagon {
+      background-color: #04c2c9;
+      display: inline-block;
+      height: 100%;
+      width: calc(100% * 0.57735);
+      i {
+        color: #fff;
+        font-size: 37pt;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        z-index: 999;
+      }
+    }
+    .hexagon:before {
+      background-color: inherit;
+      content: "";
+      height: inherit;
+      position: absolute;
+      right: calc((100% / 2) - ((100% * 0.57735) / 2));
+      top: 0;
+      transform: rotateZ(60deg);
+      width: inherit;
+    }
+    .hexagon:after {
+      background-color: inherit;
+      content: "";
+      height: inherit;
+      position: absolute;
+      right: calc((100% / 2) - ((100% * 0.57735) / 2));
+      top: 0;
+      transform: rotateZ(-60deg);
+      width: inherit;
+    }
+  }
+  /* Start featurette */
+  .featurette {
+    padding-top: 50px;
+    .me {
+      img {
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 0px #92e768;
+      }
+      .info {
+        h3 {
+          @extend %card-title;
+          margin-top: 25px;
+          margin-bottom: 0px;
+        }
+        p {
+          @extend %card-para;
+          padding: 14px;
+          padding-top: 10px;
+        }
+      }
+    }
+    .pro {
+      .progress {
+        height: 32px;
+        margin-bottom: 2%;
+        border-radius: 0;
+        .progress-bar {
+          background: #00a1a7;
+          .tag {
+            width: 100px;
+            @extend %fx;
+            background-color: #04c2c9;
+            color: #fff;
+            height: 100%;
+            font-weight: bold;
+            font-size: 17px;
+          }
+        }
+        span.f85 {
+          @extend %prospan;
+          padding-left: 53px;
+        }
+        span.f70 {
+          @extend %prospan;
+          padding-left: 148px;
+        }
+        span.f45 {
+          @extend %prospan;
+          padding-left: 309px;
+        }
+        span.f60 {
+          @extend %prospan;
+          padding-left: 211px;
+        }
+      }
+    }
+  }
+  /* end featurette */
+}

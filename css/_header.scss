@@ -1,0 +1,27 @@
+header {
+  height: calc(100vh);
+  @extend %fx;
+  text-align: center;
+  .canvas {
+    background: url(../images/download.png);
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .title {
+    color: $white-color;
+    pointer-events: none;
+    z-index: 1;
+    span {
+      color: $second-color;
+    }
+    button{
+      position: relative;
+    }
+  }
+  @extend %btn;
+}

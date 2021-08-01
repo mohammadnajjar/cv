@@ -1,0 +1,99 @@
+.projects {
+  padding-top: 50px;
+  background: $bg-p;
+  .title {
+    @extend %title;
+  }
+  .card {
+    width: 300px;
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 2px 0 rgba(0, 0, 0, .2);
+    transition: all .2s ease;
+    background: $white-color;
+    position: relative;
+    overflow: hidden;
+    &:hover,
+    &.hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 25px 0 rgba(0, 0, 0, .3), 0 0 1px 0 rgba(0, 0, 0, .25);
+      & .card-content {
+        box-shadow: inset 0 3px 0 0 $primary-color;
+        border-color: $primary-color;
+      }
+      & .card-img .overlay {
+        background-color: rgba(25, 29, 38, .85);
+        transition: opacity .2s ease;
+        opacity: 1;
+      }
+    }
+    &-img {
+      position: relative;
+      height: 224px;
+      width: 100%;
+      background-color: $white-color;
+      transition: opacity .2s ease;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      & .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white-color;
+        opacity: 0;
+        & .overlay-content {
+          line-height: 224px;
+          width: 100%;
+          text-align: center;
+          color: $white-color;
+          & a {
+            color: $white-color;
+            padding: 0 2rem;
+            display: inline-block;
+            border: 1px solid $primary-color;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover,
+            &.hover {
+              background: $primary-color;
+              border-color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    &-content {
+      width: 100%;
+      min-height: 104px;
+      background-color: $white-color;
+      border-top: 1px solid $bg-p;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 1rem 2rem;
+      transition: all .2s ease;
+      & a {
+        text-decoration: none;
+        color: $title-m;
+      }
+      & h2,a h2 {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      & p,a p {
+        font-size: .8rem;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $title-m;
+      }
+    }
+  }
+}
